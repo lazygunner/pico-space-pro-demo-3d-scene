@@ -1,0 +1,19 @@
+<!--
+     Copyright 2025 - 2026 PICO. All rights reserved.
+
+     NOTICE: All information contained herein is, and remains the property of PICO.
+     The intellectual and technical concepts contained herein are proprietary to PICO.
+     and may be covered by patents, patents in process, and are protected by trade
+     secret or copyright law. Dissemination of this information or reproduction of
+     this material is strictly forbidden unless prior written permission is obtained
+     from PICO.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+  <path
+      android:pathData="M16,16.05C16,14.945 17.22,14.276 18.152,14.869L30.644,22.819C31.508,23.369 31.508,24.631 30.644,25.181L18.152,33.131C17.22,33.724 16,33.054 16,31.949V16.05Z"
+      android:fillColor="#000000"/>
+</vector>
