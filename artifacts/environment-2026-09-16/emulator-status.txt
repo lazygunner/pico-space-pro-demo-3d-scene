@@ -1,0 +1,74 @@
+{
+  "tool_name": "emulator.status",
+  "tool_status": "SUCCESS",
+  "summary": "Collected emulator runtime status.",
+  "data": {
+    "processRunning": true,
+    "adbOnline": true,
+    "adbDeviceId": "emulator-5554",
+    "state": {
+      "pid": 54340,
+      "avd": "Pico_Emulator_6_1",
+      "executablePath": "/Users/gunner/Library/PICO/sdk/6.1/emulator/emulator",
+      "adbDeviceId": "emulator-5554",
+      "args": [
+        "-avd",
+        "Pico_Emulator_6_1",
+        "-sysdir",
+        "/Users/gunner/Library/PICO/sdk/6.1/emulator/system-images/system-images",
+        "-gpu",
+        "angle_indirect"
+      ],
+      "startedAt": "2026-09-16T03:37:47.324Z",
+      "logFile": "/Users/gunner/.pico/cli/logs/pico-emulator-2026-09-16T03-37-47-318Z.log",
+      "avdRoot": "/Users/gunner/.pico/avd",
+      "launchCwd": "/Users/gunner/Library/PICO/sdk/6.1/emulator",
+      "sdkRoot": "/Users/gunner/Library/PICO/sdk/6.1/emulator",
+      "source": "standard",
+      "createdNewAvd": false,
+      "actualSysdir": "/Users/gunner/Library/PICO/sdk/6.1/emulator/system-images/system-images",
+      "bundleVersion": "6.1.0",
+      "bootCompleted": true,
+      "startupStatus": "ready",
+      "startupMessage": "Emulator Pico_Emulator_6_1 has finished booting.",
+      "startupWarnings": [],
+      "processRunning": true,
+      "adbStatus": "online"
+    },
+    "selectedCandidate": {
+      "adbDeviceId": "emulator-5554",
+      "adbState": "device",
+      "model": "swan_arm64",
+      "device": "pico_spaceos_emulator_arm64",
+      "product": "swan",
+      "isPico": true,
+      "isCliManaged": true,
+      "score": 2015,
+      "source": "adb"
+    },
+    "candidates": [
+      {
+        "adbDeviceId": "emulator-5554",
+        "adbState": "device",
+        "model": "swan_arm64",
+        "device": "pico_spaceos_emulator_arm64",
+        "product": "swan",
+        "isPico": true,
+        "isCliManaged": true,
+        "score": 0,
+        "source": "adb"
+      }
+    ],
+    "guestProperties": {
+      "roBootQemu": "1",
+      "cpuAbi": "arm64-v8a"
+    }
+  },
+  "errors": [],
+  "resources": [],
+  "meta": {
+    "format": "json",
+    "truncated": false,
+    "candidateCount": 1
+  }
+}

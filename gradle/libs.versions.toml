@@ -1,12 +1,12 @@
 [versions]
-spatialBom = "0.10.7"
+spatialBom = "6.1.9"
 agp = "8.7.3"
-kotlin = "1.8.10"
-coreKtx = "1.13.0"
-androidxLifecycle = "2.8.2"
-activityCompose = "1.7.0"
-annotation = "1.7.0"
-appcompat = "1.6.1"
+kotlin = "2.0.21"
+coreKtx = "1.16.0"
+androidxLifecycle = "2.10.0"
+activityCompose = "1.10.1"
+annotation = "1.9.1"
+appcompat = "1.7.1"
 
 [libraries]
 spatial-bom = { module = "com.pico.spatial:bom", version.ref = "spatialBom" }
@@ -29,3 +29,4 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

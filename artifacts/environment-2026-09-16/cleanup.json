@@ -1,0 +1,15 @@
+{
+  "removed": [
+    "/Users/gunner/Library/PICO/sdk/0.10",
+    "/Users/gunner/.pico/avd/PICO_0.10.avd",
+    "/Users/gunner/.pico/avd/PICO_0.10.ini",
+    "/Users/gunner/.pico/cli/cache/downloads/emulator/pico_spatial_emulator_20260902_v6.1.0_mac.zip",
+    "/Users/gunner/Library/PICO/sdk/system-images (obsolete symlink only)"
+  ],
+  "kept": [
+    "PICO 6.1.0",
+    "Pico_Emulator_6_1",
+    "Android SDK",
+    "Gradle/Maven dependencies including Spatial BOM 0.10.7"
+  ]
+}

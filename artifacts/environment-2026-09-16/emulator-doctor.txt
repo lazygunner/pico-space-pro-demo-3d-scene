@@ -1,0 +1,219 @@
+{
+  "tool_name": "emulator.doctor",
+  "tool_status": "SUCCESS",
+  "summary": "PICO Emulator prerequisites are ready; optional components may be skipped.",
+  "data": {
+    "platform": "macos",
+    "androidStudio": {
+      "installed": true,
+      "candidates": [
+        {
+          "path": "/Applications/Android Studio Preview.app",
+          "launcherPath": "/Applications/Android Studio Preview.app/Contents/MacOS/studio",
+          "version": "AI-251.27812.49.2514.14085407",
+          "isRequiredVersion": true
+        }
+      ]
+    },
+    "androidSdk": {
+      "root": "/Users/gunner/Library/Android/sdk",
+      "hasPlatform35": true,
+      "hasSources35": true
+    },
+    "plugin": {
+      "found": true,
+      "matches": [
+        "/Users/gunner/Library/Application Support/Google/AndroidStudio2025.1.4/plugins/SpatialPlugin"
+      ],
+      "searchedDirectories": [
+        "/Users/gunner/Library/Application Support/Google"
+      ]
+    },
+    "emulator": {
+      "path": "/Users/gunner/Library/PICO/sdk/6.1/emulator/emulator",
+      "source": "/Users/gunner/Library/PICO/sdk/6.1/emulator"
+    },
+    "picoBundles": [
+      {
+        "root": "/Users/gunner/Library/PICO/sdk/6.1/emulator",
+        "emulatorPath": "/Users/gunner/Library/PICO/sdk/6.1/emulator/emulator",
+        "avdRoot": "/Users/gunner/.pico/avd",
+        "sdkRoot": "/Users/gunner/Library/PICO/sdk/6.1/emulator",
+        "avds": [
+          {
+            "name": "PICO_0.10",
+            "iniPath": "/Users/gunner/.pico/avd/PICO_0.10.ini",
+            "avdRoot": "/Users/gunner/.pico/avd",
+            "source": "pico_bundle",
+            "bundleRoot": "/Users/gunner/Library/PICO/sdk/6.1/emulator",
+            "emulatorPath": "/Users/gunner/Library/PICO/sdk/6.1/emulator/emulator",
+            "sdkRoot": "/Users/gunner/Library/PICO/sdk/6.1/emulator",
+            "displayName": "PICO 0.10"
+          },
+          {
+            "name": "Pico_Emulator_6_1",
+            "iniPath": "/Users/gunner/.pico/avd/Pico_Emulator_6_1.ini",
+            "avdRoot": "/Users/gunner/.pico/avd",
+            "source": "pico_bundle",
+            "bundleRoot": "/Users/gunner/Library/PICO/sdk/6.1/emulator",
+            "emulatorPath": "/Users/gunner/Library/PICO/sdk/6.1/emulator/emulator",
+            "sdkRoot": "/Users/gunner/Library/PICO/sdk/6.1/emulator",
+            "displayName": "PICO Emulator 6.1.0"
+          }
+        ],
+        "version": "6.1.0",
+        "actualSysdir": "/Users/gunner/Library/PICO/sdk/6.1/emulator/system-images/system-images",
+        "abiType": "arm64-v8a",
+        "apiLevel": "36",
+        "installSource": "cn",
+        "artifactUrl": "https://lf-devtools.picoxr.com/obj/spatial-toolbox/online/emulator/pico_spatial_emulator_20260902_v6.1.0_mac.zip",
+        "artifactUrlKind": "unknown",
+        "buildType": "user",
+        "buildFlavor": "picosdk_spaceos_arm64-user"
+      },
+      {
+        "root": "/Users/gunner/Library/PICO/sdk",
+        "emulatorPath": "/Users/gunner/Library/PICO/sdk/emulator",
+        "avdRoot": "/Users/gunner/.pico/avd",
+        "sdkRoot": "/Users/gunner/Library/PICO/sdk",
+        "avds": [
+          {
+            "name": "PICO_0.10",
+            "iniPath": "/Users/gunner/.pico/avd/PICO_0.10.ini",
+            "avdRoot": "/Users/gunner/.pico/avd",
+            "source": "pico_bundle",
+            "bundleRoot": "/Users/gunner/Library/PICO/sdk",
+            "emulatorPath": "/Users/gunner/Library/PICO/sdk/emulator",
+            "sdkRoot": "/Users/gunner/Library/PICO/sdk",
+            "displayName": "PICO 0.10"
+          },
+          {
+            "name": "Pico_Emulator_6_1",
+            "iniPath": "/Users/gunner/.pico/avd/Pico_Emulator_6_1.ini",
+            "avdRoot": "/Users/gunner/.pico/avd",
+            "source": "pico_bundle",
+            "bundleRoot": "/Users/gunner/Library/PICO/sdk",
+            "emulatorPath": "/Users/gunner/Library/PICO/sdk/emulator",
+            "sdkRoot": "/Users/gunner/Library/PICO/sdk",
+            "displayName": "PICO Emulator 6.1.0"
+          }
+        ],
+        "actualSysdir": "/Users/gunner/Library/PICO/sdk/system-images/system-images",
+        "abiType": "arm64-v8a",
+        "apiLevel": "36",
+        "buildType": "user",
+        "buildFlavor": "picosdk_spaceos_arm64-user"
+      }
+    ],
+    "storageLayout": {
+      "status": "clean",
+      "picoHome": "/Users/gunner/Library/PICO/sdk",
+      "cliDataPath": "/Users/gunner/.pico/cli",
+      "avdPath": "/Users/gunner/.pico/avd",
+      "legacyCliDataPath": "/Users/gunner/Library/PICO/sdk/cli",
+      "legacyAvdPath": "/Users/gunner/Library/PICO/sdk/avd",
+      "migratedPaths": [],
+      "warnings": []
+    },
+    "common": {
+      "primer": {
+        "installed": true,
+        "binaryPath": "/Users/gunner/.local/bin/primer-cli",
+        "envDoctorStatus": "ok"
+      },
+      "payload": {
+        "javaHomeValid": true,
+        "javaHomePath": "/Users/gunner/.pico/primer-cli/jdk/jdk-21.0.12.1+1/Contents/Home",
+        "androidSdkInstalled": true,
+        "androidSdkPath": "/Users/gunner/Library/Android/sdk",
+        "androidSdkHasPlatformsAndSources": true,
+        "picoHomeConfigured": true,
+        "picoHomePath": "/Users/gunner/Library/PICO/sdk",
+        "agentVaultInstalled": true,
+        "agentVaultPath": "/Users/gunner/Library/PICO/sdk/6.1/agent-vault",
+        "templatesInstalled": false,
+        "spatialSdkToolsVersion": "6.1",
+        "picoSdk": {
+          "found": true,
+          "sdks": [
+            {
+              "path": "/Users/gunner/Library/PICO/sdk",
+              "isPicoHome": true,
+              "versions": [
+                {
+                  "name": "0.10",
+                  "components": [
+                    {
+                      "name": "editor",
+                      "version": "0.10.4"
+                    },
+                    {
+                      "name": "emulator",
+                      "version": "0.10.0"
+                    }
+                  ]
+                },
+                {
+                  "name": "6.1",
+                  "components": [
+                    {
+                      "name": "agent-vault",
+                      "version": "6.1.2"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "available": true
+    },
+    "checks": [
+      {
+        "id": "common.pico.home",
+        "label": "PICO_HOME",
+        "status": "ok",
+        "summary": "PICO_HOME is configured at /Users/gunner/Library/PICO/sdk."
+      },
+      {
+        "id": "common.android.sdk",
+        "label": "Android SDK",
+        "status": "ok",
+        "summary": "Android SDK Platform 35 and Sources for Android 35 are available at /Users/gunner/Library/Android/sdk."
+      },
+      {
+        "id": "storage.layout",
+        "label": "PICO emulator storage layout",
+        "status": "ok",
+        "summary": "CLI data uses /Users/gunner/.pico/cli; AVDs and emulator runtime data use /Users/gunner/.pico/avd (shared with primer-cli)."
+      },
+      {
+        "id": "windows.virtualization",
+        "label": "Windows virtualization",
+        "status": "skip",
+        "summary": "Windows virtualization is not applicable on this platform."
+      },
+      {
+        "id": "pico.plugin",
+        "label": "PICO Spatial Plugin",
+        "status": "ok",
+        "summary": "PICO Spatial Plugin was detected."
+      },
+      {
+        "id": "pico.emulator",
+        "label": "PICO Emulator bundle",
+        "status": "ok",
+        "summary": "PICO Emulator is available at /Users/gunner/Library/PICO/sdk/6.1/emulator/emulator."
+      }
+    ]
+  },
+  "errors": [],
+  "resources": [],
+  "meta": {
+    "format": "json",
+    "truncated": false,
+    "platform": "macos",
+    "picoHome": "/Users/gunner/Library/PICO/sdk"
+  }
+}

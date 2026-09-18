@@ -61,28 +61,30 @@ fun HomePanel() {
     ) {
         Text(
             text = "Hotline Chamber",
+            modifier = Modifier.vibrantEffect(Vibrant.Semidark),
             fontSize = 44.sp,
             fontWeight = FontWeight.Bold,
             color = Color.Vibrant,
-            vibrant = Vibrant.Semidark,
         )
         Spacer(modifier = Modifier.height(16.dp))
         Text(
             text = "Control 风格复古未来主义 · 玻璃立方体热线房间",
+            modifier = Modifier.vibrantEffect(Vibrant.Darker),
             fontSize = 22.sp,
             color = Color.Vibrant,
-            vibrant = Vibrant.Darker,
             textAlign = TextAlign.Center,
         )
         Spacer(modifier = Modifier.height(44.dp))
         Button(
             colors = ButtonDefaults.buttonColors(
-                containerColor = PicoTheme.colorScheme.accent.color,
+                containerColor = PicoTheme.colorScheme.fillPrimary,
                 contentColor = Color.White,
             ),
             onClick = {
                 coroutineScope.launch(Dispatchers.Main.immediate) {
-                    spatialNavigator.openStage(STAGE_ID, StageStyle.Mixed)
+                    // Full 全沉浸：房间以脚底原点世界锁定，不随头部/视角移动。
+                    // Mixed 是透视 MR，模拟器无真实空间追踪会导致内容半跟随头部。
+                    spatialNavigator.openStage(STAGE_ID, StageStyle.Full)
                 }
             },
         ) {
@@ -96,9 +98,9 @@ fun HomePanel() {
         Spacer(modifier = Modifier.height(28.dp))
         Text(
             text = "进入后用手势捏合：可抓取并移动电话、圆几、皮椅",
+            modifier = Modifier.vibrantEffect(Vibrant.Darker),
             fontSize = 17.sp,
             color = Color.Vibrant,
-            vibrant = Vibrant.Darker,
             textAlign = TextAlign.Center,
         )
     }

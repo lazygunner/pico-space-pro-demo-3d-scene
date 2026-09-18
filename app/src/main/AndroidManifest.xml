@@ -33,7 +33,8 @@
             <meta-data
                 android:name="pico.spatial.windowcontainer.resizetype"
                 android:value="2" />
-            <meta-data android:name="pico.spatial.windowcontainer.worldscaletype" android:value="2" />
+            <!-- 6.1 默认 Dynamic(1)：窗口随观察距离保持恒定视觉大小；Fixed(2) 会让远处窗口又小又远 -->
+            <meta-data android:name="pico.spatial.windowcontainer.worldscaletype" android:value="1" />
             <meta-data
                 android:name="pico.spatial.windowcontainer.materialbackground"
                 android:value="0" />

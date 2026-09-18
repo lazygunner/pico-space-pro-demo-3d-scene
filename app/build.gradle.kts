@@ -1,17 +1,18 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.compose)
 }
 
 android {
     namespace = "com.pico.spatial.sample.hotlinechamber"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.pico.spatial.sample.hotlinechamber"
         minSdk = 26
-        targetSdk = 35
-        versionCode = 1
+        targetSdk = 36
+        versionCode = 2
         versionName = libs.versions.spatialBom.get()
         vectorDrawables { useSupportLibrary = true }
         ndk { abiFilters.add("arm64-v8a") }
@@ -32,11 +33,16 @@ android {
     }
     kotlinOptions { jvmTarget = "11" }
     buildFeatures { compose = true }
-    composeOptions { kotlinCompilerExtensionVersion = "1.4.3" }
+    androidResources {
+        noCompress.add(".glb")
+        noCompress.add(".ktx")
+        noCompress.add(".usdz")
+        noCompress.add(".bundle")
+    }
 }
 
 dependencies {
-    // Spatial SDK dependencies（全部已在本机 Gradle 缓存，无需额外下载）
+    // Spatial SDK 6.1.x（版本由 BOM 统一对齐）
     implementation(platform(libs.spatial.bom))
     implementation(libs.spatial.core)
     implementation(libs.spatial.foundation)
@@ -46,7 +52,7 @@ dependencies {
     implementation(libs.spatial.ui.platform)
     implementation(libs.spatial.ui.design)
 
-    // AndroidX / Compose
+    // AndroidX / Compose（版本与 6.1.9 传递依赖基线对齐）
     implementation(libs.androidx.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
     implementation(libs.lifecycle.runtime.compose)
@@ -57,7 +63,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling.preview)
 }
 
-// Spatial SDK 要求：避免与自带的 Compose 运行时冲突
+// Spatial SDK 自带裁剪过的 Compose 运行时：排除标准 Compose 件避免类冲突
 configurations.all {
     resolutionStrategy {
         exclude("androidx.compose.ui", "ui")

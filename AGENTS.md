@@ -18,7 +18,8 @@ Also read `./PICO-SPATIAL-AGENTIC-TOOLS.AGENTS.md` for PICO Spatial plugin guida
 - 入口 DSL：`Main.kt` 的 `mainApp(scope)`
   - `DefaultWindowContainer { HomePanel() }`：启动悬浮窗（Home）。
   - `Stage(id = STAGE_ID) { ChamberStage() }`：全空间沉浸场景。
-- 常量：`STAGE_ID = "HOTLINE_CHAMBER"`；进入方式 `openStage(STAGE_ID, StageStyle.Mixed)`。
+- 常量：`STAGE_ID = "HOTLINE_CHAMBER"`；当前 `HomePanel.kt` 进入方式为
+  `openStage(STAGE_ID, StageStyle.Full)`，以代码为准。
 
 ## 3D 模型约定（重要）
 - 4 个 PBR GLB 放在 `app/src/main/assets/` **根目录**（不是子目录）：
@@ -41,6 +42,9 @@ Also read `./PICO-SPATIAL-AGENTIC-TOOLS.AGENTS.md` for PICO Spatial plugin guida
   例如 `pico-cli emulator start`、`pico-cli app install <apk>`、
   `pico-cli app launch com.pico.spatial.sample.hotlinechamber --activity .platform.LaunchActivity`。
 - 历史 0.10.7 手写脚本与排坑文档已移到 `archive/0.10.7/`，新栈勿用其中的 QT/AVD/JDK 硬编码。
+- 本机环境迁移的补充技能为 `self-built-skill/pico-local-dev/SKILL.md`
+  （`~/.codex/skills/pico-local-dev` 已链接到该目录）；
+  实际版本与验证证据见 `docs/本地开发环境.md`。目标版本不能代替安装/运行证据。
 
 ## 本项目“进入房间成功”的冒烟判据
 1. `./gradlew :app:assembleDebug` 通过，`pico-cli app install` 成功。
@@ -55,6 +59,7 @@ Also read `./PICO-SPATIAL-AGENTIC-TOOLS.AGENTS.md` for PICO Spatial plugin guida
 - 官方 setup 选择的是 **traecli + local**：新 Skills/MCP 需在 Trae CLI 新会话才加载。
 - 新栈目标为 PICO OS 6.1 + Android Studio 2025.1.x。
 - 本机沙箱 npm 因 CA 问题，装 pico-cli 时需 `NODE_EXTRA_CA_CERTS=<系统钥匙串导出的根证书pem>`；
-  setup 的 graphify/vault/profiler 辅助组件因本机 uv+Python 环境问题未装成，不影响构建与运行。
+  该 CA 问题按实际报错处理，不关闭 TLS 校验。graphify/vault/profiler 是否可用以当前
+  doctor 为准，不沿用历史 setup 失败结论。
 - PICO 空间 surface 受保护，`capture screenshot` 对空间容器可能是黑图；2D `input tap`
   不能驱动空间窗口/手势，空间内交互以日志判据 + 人工确认为准。
